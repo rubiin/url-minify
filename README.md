@@ -4,7 +4,7 @@
 
 # INSTALLAION
 
-```
+```sh
 npm i tweeny-weeny-url
 yarn add tweeny-weeny-url
 
