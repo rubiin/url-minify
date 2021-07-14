@@ -1,4 +1,4 @@
-# js-utils
+# Teeny weeny Url
 
 > Make url shorter
 
