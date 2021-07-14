@@ -1,0 +1,36 @@
+{
+  "name": "teeny-weeny-url",
+  "version": "2.0.0",
+  "description": "Shortens url without any api keys",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "rimraf dist && tsc -p tsconfig.build.json"
+  },
+  "keywords": [
+    "utils",
+    "urls"
+  ],
+  "author": "Rubin Bhandari <roobin.bhandari@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rubiin/teeny-weeny"
+  },
+  "bugs": {
+    "url": "https://github.com/rubiin/teeny-weeny/issues"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "main": "dist/lib.js",
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "prettier": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.4",
+    "validator": "^13.6.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
