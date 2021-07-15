@@ -6,9 +6,12 @@
 </p>
 
 
-# Teeny weeny Url
+# Minify Url
 
-> Make url shorter
+<img src="./logo.png" height="150">
+
+
+> Library to make url shorter
 
 # INSTALLAION
 

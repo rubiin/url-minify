@@ -1,6 +1,6 @@
 {
-  "name": "teeny-weeny-url",
-  "version": "2.0.1",
+  "name": "url-minify",
+  "version": "1.0.0",
   "description": "Shortens url without any api keys",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
@@ -15,10 +15,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rubiin/teeny-weeny"
+    "url": "https://github.com/rubiin/url-minify"
   },
   "bugs": {
-    "url": "https://github.com/rubiin/teeny-weeny/issues"
+    "url": "https://github.com/rubiin/url-minify/issues"
   },
   "dependencies": {
     "axios": "^0.21.1"
