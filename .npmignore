@@ -6,6 +6,7 @@ test/*
 LICENSE
 yarn.lock
 package-lock.json
+jest.config.js
 .git/
 .github/
 .prettierrc

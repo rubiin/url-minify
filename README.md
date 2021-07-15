@@ -8,7 +8,7 @@
 
 # Minify Url
 
-<img src="./logo.png" height="150">
+<img src="https://i.imgur.com/gbXDQyL.png" height="150">
 
 
 > Library to make url shorter
