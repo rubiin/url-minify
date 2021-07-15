@@ -1,7 +1,7 @@
  <p float="left">
-<a href="https://www.npmjs.com/package/teeny-weeny-url"><img src="https://img.shields.io/npm/l/teeny-weeny-url"" alt="Package License" /></a>
-<a href="https://www.npmjs.com/package/teeny-weeny-url"><img src="https://img.shields.io/npm/dw/teeny-weeny-url"" alt="NPM Downloads" /></a>
- <a href="https://www.npmjs.com/package/teeny-weeny-url"><img src="https://github.com/rubiin/tweeny-weeny/workflows/CI/badge.svg" alt="CI" /></a> 
+<a href="https://www.npmjs.com/package/url-minify"><img src="https://img.shields.io/npm/l/url-minify"" alt="Package License" /></a>
+<a href="https://www.npmjs.com/package/url-minify"><img src="https://img.shields.io/npm/dw/url-minify"" alt="NPM Downloads" /></a>
+ <a href="https://www.npmjs.com/package/url-minify"><img src="https://github.com/rubiin/tweeny-weeny/workflows/CI/badge.svg" alt="CI" /></a> 
 
 </p>
 
