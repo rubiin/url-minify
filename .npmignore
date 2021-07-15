@@ -14,3 +14,4 @@ nest-cli.json
 _config.yml
 tsconfig*
 .editorconfig
+*.log
