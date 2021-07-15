@@ -1,4 +1,4 @@
-import axios from 'axios';
+import fetch from 'node-fetch';
 
 const ValidProviders: Record<string, string> = {
 	isgd: 'https://is.gd/create.php?format=simple&url=',
@@ -16,9 +16,13 @@ export default async (
 	option: IOptions = { provider: 'isgd' },
 ): Promise<string> =>{
 	try {
-		const response = await axios.get(ValidProviders[option.provider] + url);
-		return response.data;
+		const response = await fetch(ValidProviders[option.provider] + url);
+
+   const data = await response.text();
+		return data;
 	} catch (error) {
 		throw new Error(error);
 	}
 }
+
+

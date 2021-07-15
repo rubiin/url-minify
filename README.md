@@ -27,12 +27,13 @@ yarn add tweeny-weeny-url
 Currently two free providers is.gd and cdpt.in is supported
 
 ```ts
-import minify from 'tweeny-weeny-url';
+import minify from 'url-minify';
 
 
 ~async function(){
 
   console.log(await minify('www.google.com',{ provider: 'isgd'}))  // https://is.gd/PTkruq
+  console.log(await minify('www.google.com',{ provider: 'cdpt'}))  // https://cdpt.in/ab
 
 }()
 

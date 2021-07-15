@@ -1,10 +1,11 @@
 {
   "name": "url-minify",
-  "version": "1.0.1",
-  "description": "Shortens url without any api keys",
+  "version": "1.0.5",
+  "description": "Library to shorten url without any api keys",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
-    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "minify": "uglifyjs dist/lib.js --compress --mangle -o dist/lib.js",
+    "build": "rimraf dist && tsc -p tsconfig.build.json --declaration && npm run minify",
     "test": "jest"
   },
   "keywords": [
@@ -21,18 +22,19 @@
     "url": "https://github.com/rubiin/url-minify/issues"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "node-fetch": "^2.6.1"
   },
   "main": "dist/lib.js",
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^15.0.2",
+    "@types/node-fetch": "^2.5.11",
     "jest": "^27.0.6",
     "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.3",
     "typescript": "^4.2.4",
-    "validator": "^13.6.0"
+    "uglify-js": "^3.13.10"
   },
   "publishConfig": {
     "access": "public"
