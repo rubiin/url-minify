@@ -10,7 +10,9 @@
   },
   "keywords": [
     "utils",
-    "urls"
+    "urlshortner",
+    "urls",
+    "shortner"
   ],
   "author": "Rubin Bhandari <roobin.bhandari@gmail.com>",
   "license": "MIT",
@@ -27,14 +29,14 @@
   "main": "dist/lib.js",
   "devDependencies": {
     "@types/jest": "^26.0.24",
-    "@types/node": "^15.0.2",
-    "@types/node-fetch": "^2.5.11",
+    "@types/node": "^16.4.3",
+    "@types/node-fetch": "^2.5.12",
     "jest": "^27.0.6",
-    "prettier": "^2.3.0",
+    "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "ts-jest": "^27.0.3",
-    "typescript": "^4.2.4",
-    "uglify-js": "^3.13.10"
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5",
+    "uglify-js": "^3.14.1"
   },
   "publishConfig": {
     "access": "public"
