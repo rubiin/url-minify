@@ -15,9 +15,5 @@ describe('should get a shortened url', () => {
 		).resolves.toMatch(/^https:\/\/cdpt.in\//);
 	});
 
-  	it('should get shortened url with shrtco', async () => {
-		await expect(
-			tweeny('www.google.com', { provider: 'shrtco' }),
-		).resolves.toMatch(/^https:\/\/shrtco.de\//);
-	});
+
 });
