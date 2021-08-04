@@ -24,6 +24,7 @@
     "url": "https://github.com/rubiin/url-minify/issues"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "node-fetch": "^2.6.1"
   },
   "main": "dist/lib.js",
