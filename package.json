@@ -24,13 +24,12 @@
     "url": "https://github.com/rubiin/url-minify/issues"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "node-fetch": "^2.6.1"
+    "axios": "^0.21.1"
   },
   "main": "dist/lib.js",
   "devDependencies": {
     "@types/jest": "^26.0.24",
-    "@types/node": "^16.4.3",
+    "@types/node": "^16.4.12",
     "@types/node-fetch": "^2.5.12",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",

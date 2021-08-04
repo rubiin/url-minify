@@ -25,7 +25,7 @@ yarn add url-minify
 # USAGE
 
 
-Currently two free providers is.gd and cdpt.in is supported
+Currently 4 free providers are supported
 
 ```ts
 import minify from 'url-minify';
@@ -33,8 +33,10 @@ import minify from 'url-minify';
 
 ~async function(){
 
-  console.log(await minify('www.google.com',{ provider: 'isgd'}))  // https://is.gd/PTkruq
-  console.log(await minify('www.google.com',{ provider: 'cdpt'}))  // https://cdpt.in/ab
+  console.log(await minify('https://rubiin.vercel.app',{ provider: 'isgd'}))  // https://is.gd/PTkruq
+  console.log(await minify('https://rubiin.vercel.app',{ provider: 'cdpt'}))  // https://cdpt.in/ab
+  console.log(await minify('https://rubiin.vercel.app',{ provider: 'kroom'}))  // https://cdpt.in/ab
+  console.log(await minify('https://rubiin.vercel.app',{ provider: 'tinyurl'}))  // https://cdpt.in/ab
 
 }()
 
