@@ -82,7 +82,7 @@ export default async (
 			ValidProviders[option.provider],
 			longUrl,
 		);
-		return responseMap(response, ValidProviders[option.provider], longUrl);
+		return responseMap(response, longUrl);
 	} catch (error) {
 		throw new Error(error);
 	}

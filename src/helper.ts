@@ -19,13 +19,14 @@ export interface IResponse {
  */
 export function responseMap(
 	response: Record<any, any>,
-	longUrl: string,
-  provider: any
+	longUrl: string
 ): IResponse {
 	const responseType = response.headers['content-type'].split(';')[0];
 	if (responseType === 'text/plain' || responseType === 'text/html') {
 		return { longUrl, shortUrl: response.data };
 	} else {
+		// json response
+
 		if (response.data?.url) {
 			return { longUrl, shortUrl: response.data.url };
 		} else if (response.data?.shortUrl) {
