@@ -1,11 +1,13 @@
 import axios from 'axios';
-import { responseMap } from './helper';
+import { IResponse, responseMap } from './helper';
 
-interface IResponse {
-	longUrl: string;
-	shortUrl: string;
-}
-
+/**
+ *
+ *
+ * @param {{ url: string; method: string }} provider
+ * @param {string} longUrl
+ * @return {*}
+ */
 const getAxios = (
 	provider: { url: string; method: string },
 	longUrl: string,
@@ -46,21 +48,34 @@ const ValidProviders: Record<string, any> = {
 
 type providers = 'isgd' | 'cdpt' | 'kroom' | 'tinyurl';
 
+/**
+ *
+ *
+ * @interface IOptions
+ */
 interface IOptions {
 	provider: providers;
 }
 
+/**
+ *
+ *
+ * @export
+ * @param {string} longUrl
+ * @param {IOptions} option
+ * @return {IResponse}
+ */
 export default async (
 	longUrl: string,
 	option: IOptions = { provider: 'isgd' },
-): Promise<Record<string, string>> => {
+): Promise<IResponse> => {
 	try {
 		const response = await getAxios(
 			ValidProviders[option.provider],
 			longUrl,
 		);
 		return responseMap(
-			response.data,
+			response,
 			response.headers['content-type'].split(';')[0],
 			longUrl,
 		);
