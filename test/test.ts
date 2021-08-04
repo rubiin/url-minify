@@ -25,6 +25,11 @@ describe('should get a shortened url', () => {
 		expect(response.shortUrl).toMatch(/^www.kroom.tk\//);
 	});
 
+  	it('should get shortened url with 4h.net', async () => {
+		const response = await minify(url, { provider: '4hnet' });
+			expect(response.shortUrl).toMatch(/^https:\/\/4h.net\//);
+	});
+
 	it('should get shortened url with tinu.be', async () => {
 		const response = await minify(url, { provider: 'tinube' });
 		expect(response.shortUrl).toMatch(/^https:\/\/tinu.be\//);

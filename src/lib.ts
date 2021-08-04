@@ -36,6 +36,11 @@ const ValidProviders: Record<string, any> = {
 		url: 'https://cdpt.in/shorten?url=',
 		method: 'get',
 	},
+  '4hnet': {
+		url: 'https://4h.net/api.php?url=',
+		method: 'get',
+	},
+
 
 // POST APIS
 
@@ -49,7 +54,7 @@ const ValidProviders: Record<string, any> = {
 	},
 };
 
-type providers = 'isgd' | 'cdpt' | 'i8ae'| 'kroom' | 'tinyurl' | 'tinube';
+type providers = 'isgd' | 'cdpt' | 'i8ae'| 'kroom' | 'tinyurl' | 'tinube' | '4hnet';
 
 /**
  *
