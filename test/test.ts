@@ -20,8 +20,13 @@ describe('should get a shortened url', () => {
 		expect(response.shortUrl).toMatch(/^https:\/\/tinyurl.com\//);
 	});
 
-  	it('should get shortened url with kroom.tk', async () => {
+	it('should get shortened url with kroom.tk', async () => {
 		const response = await minify(url, { provider: 'kroom' });
 		expect(response.shortUrl).toMatch(/^www.kroom.tk\//);
+	});
+
+	it('should get shortened url with tinu.be', async () => {
+		const response = await minify(url, { provider: 'tinube' });
+		expect(response.shortUrl).toMatch(/^https:\/\/tinu.be\//);
 	});
 });

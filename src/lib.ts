@@ -9,15 +9,13 @@ import { IResponse, responseMap } from './helper';
  * @return {*}
  */
 const getAxios = (
-	provider: { url: string; method: string },
+	provider: { url: string; method: string; body?: any },
 	longUrl: string,
 ) => {
 	if (provider.method === 'get') {
 		return axios.get(provider.url + longUrl);
 	} else {
-		return axios.post(provider.url, {
-			longUrl: longUrl,
-		});
+		return axios.post(provider.url, provider.body(longUrl));
 	}
 };
 
@@ -39,14 +37,19 @@ const ValidProviders: Record<string, any> = {
 		method: 'get',
 	},
 
-	// shrtco: {
-	// 	url: 'https://api.shrtco.de/v2/shorten?url=',
-	// 	method: 'get',
-	// 	response: 'json',
-	// },
+// POST APIS
+
+
+	tinube: {
+		url: 'https://tinu.be/api/shorten',
+		method: 'post',
+		body: (val: string) => {
+			return { longUrl: val };
+		},
+	},
 };
 
-type providers = 'isgd' | 'cdpt' | 'kroom' | 'tinyurl';
+type providers = 'isgd' | 'cdpt' | 'i8ae'| 'kroom' | 'tinyurl' | 'tinube';
 
 /**
  *
@@ -74,11 +77,7 @@ export default async (
 			ValidProviders[option.provider],
 			longUrl,
 		);
-		return responseMap(
-			response,
-			response.headers['content-type'].split(';')[0],
-			longUrl,
-		);
+		return responseMap(response, ValidProviders[option.provider], longUrl);
 	} catch (error) {
 		throw new Error(error);
 	}
