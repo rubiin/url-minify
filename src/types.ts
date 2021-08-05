@@ -39,4 +39,5 @@ export interface IProviders {
 	url: string;
 	method: string;
 	body?: any;
+  formData?: boolean;
 }

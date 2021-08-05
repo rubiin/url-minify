@@ -38,6 +38,8 @@ import minify from 'url-minify';
   
 }()
 
+```
+
 ## API
 
 ### minify(link,options)
@@ -61,7 +63,6 @@ Type: `number`
 Response timeout in milliseconds. Defaults to `2000`
 
 
-```
 # Providers supported
 
 Url shortner supports the following providers.
