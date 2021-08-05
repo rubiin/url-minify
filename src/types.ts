@@ -1,5 +1,6 @@
 export type providers =
 	| 'isgd'
+	| 'tly'
 	| 'cdpt'
 	| 'kroom'
 	| 'tinyurl'

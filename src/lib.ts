@@ -50,6 +50,13 @@ const ValidProviders: Record<string, IProviders> = {
 			return { longUrl: val };
 		},
 	},
+	tly: {
+		url: 'https://t.ly/api/v1/link/shorten',
+		method: 'post',
+		body: (val: string) => {
+			return { long_url: val };
+		},
+	},
 };
 
 /**

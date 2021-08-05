@@ -27,5 +27,8 @@ export function responseMap(
 		} else if (response.data?.short) {
 			return { longUrl, shortUrl: response.data.short };
 		}
+     else if (response.data?.short_url) {
+			return { longUrl, shortUrl: response.data.short_url };
+		}
 	}
 }

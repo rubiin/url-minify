@@ -34,4 +34,9 @@ describe('should get a shortened url', () => {
 		const response = await minify(url, { provider: 'tinube' });
 		expect(response.shortUrl).toMatch(/^https:\/\/tinu.be\//);
 	});
+
+   it('should get shortened url with t.ly', async () => {
+		const response = await minify(url, { provider: 'tly' });
+		expect(response.shortUrl).toMatch(/^https:\/\/t.ly\//);
+	});
 });
