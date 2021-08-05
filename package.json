@@ -31,8 +31,7 @@
     "url": "https://github.com/rubiin/url-minify/issues"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "node-url-shortener": "^2.0.0"
+    "axios": "^0.21.1"
   },
   "main": "dist/lib.js",
   "devDependencies": {
