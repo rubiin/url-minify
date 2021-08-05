@@ -1,4 +1,3 @@
-tsconfig.json
 node_modules/
 src/
 .circleci/*
@@ -10,7 +9,6 @@ jest.config.js
 .git/
 .github/
 .prettierrc
-nest-cli.json
 _config.yml
 tsconfig*
 .editorconfig

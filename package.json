@@ -10,9 +10,16 @@
   },
   "keywords": [
     "utils",
-    "urlshortner",
     "urls",
-    "shortner"
+    "shortner",
+    "minify",
+    "url",
+    "shortner",
+    "node",
+    "urlshortner",
+    "shorturl",
+    "url-shortner",
+    "node-shorturl"
   ],
   "author": "Rubin Bhandari <roobin.bhandari@gmail.com>",
   "license": "MIT",
@@ -24,13 +31,13 @@
     "url": "https://github.com/rubiin/url-minify/issues"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "node-url-shortener": "^2.0.0"
   },
   "main": "dist/lib.js",
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.12",
-    "@types/node-fetch": "^2.5.12",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",

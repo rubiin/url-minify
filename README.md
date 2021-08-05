@@ -34,7 +34,7 @@ import minify from 'url-minify';
 
   console.log(await minify('https://rubiin.vercel.app',{ provider: 'isgd'}))  
   
-  // {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
+  // ==> {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
   
 }()
 
