@@ -1,28 +1,19 @@
-/**
- *
- *
- * @interface IResponse
- */
-export interface IResponse {
-	longUrl: string;
-	shortUrl: string;
-}
+import { IResponse } from './types';
 
 /**
  *
  *
  * @export
  * @param {Record<any, any>} response
- * @param {string} responseType
  * @param {string} longUrl
  * @return {*}  {IResponse}
  */
 export function responseMap(
 	response: Record<any, any>,
-	longUrl: string
+	longUrl: string,
 ): IResponse {
 	const responseType = response.headers['content-type'].split(';')[0];
-	if (responseType === 'text/plain' || responseType === 'text/html') {
+	if (['text/plain', 'text/html'].includes(responseType)) {
 		return { longUrl, shortUrl: response.data };
 	} else {
 		// json response

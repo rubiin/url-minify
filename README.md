@@ -30,19 +30,50 @@ Currently 4 free providers are supported
 ```ts
 import minify from 'url-minify';
 
-
 ~async function(){
 
-  console.log(await minify('https://rubiin.vercel.app',{ provider: 'isgd'}))  // https://is.gd/PTkruq
-  console.log(await minify('https://rubiin.vercel.app',{ provider: 'cdpt'}))  // https://cdpt.in/ab
-  console.log(await minify('https://rubiin.vercel.app',{ provider: 'kroom'}))  // https://cdpt.in/ab
-  console.log(await minify('https://rubiin.vercel.app',{ provider: 'tinyurl'}))  // https://cdpt.in/ab
-
+  console.log(await minify('https://rubiin.vercel.app',{ provider: 'isgd'}))  
+  
+  // {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
+  
 }()
+
+## API
+
+### minify(link,options)
+
+
+#### options
+
+Type: `object`
+
+##### provider
+
+Type: `string`
+
+Service to use for shortening links. Defaults to `isgd`
+Available providers: `'isgd'| 'cdpt'| 'kroom'| 'tinyurl'| 'tinube'| '4hnet'`
+
+##### timeout
+
+Type: `number`
+
+Response timeout in milliseconds. Defaults to `2000`
 
 
 ```
+# Providers supported
 
+Dillinger is currently extended with the following plugins.
+
+| Provider | Status |
+| -------- | ------ |
+| is.gd | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
+| cdpt.in | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
+| tinu.be | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
+| kroom.tk | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
+| tinyurl.com | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
+| 4h.net | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
 
 ## Contributing
 

@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { IResponse, responseMap } from './helper';
+import { responseMap } from './helper';
+import { IOptions, IProviders, IResponse } from './types';
 
 /**
  *
@@ -8,18 +9,17 @@ import { IResponse, responseMap } from './helper';
  * @param {string} longUrl
  * @return {*}
  */
-const getAxios = (
-	provider: { url: string; method: string; body?: any },
-	longUrl: string,
-) => {
+const getAxios = (provider: IProviders, longUrl: string, option: IOptions) => {
 	if (provider.method === 'get') {
-		return axios.get(provider.url + longUrl);
+		return axios.get(provider.url + longUrl, { timeout: option.timeout });
 	} else {
-		return axios.post(provider.url, provider.body(longUrl));
+		return axios.post(provider.url, provider.body(longUrl), {
+			timeout: option.timeout,
+		});
 	}
 };
 
-const ValidProviders: Record<string, any> = {
+const ValidProviders: Record<string, IProviders> = {
 	isgd: {
 		url: 'https://is.gd/create.php?format=simple&url=',
 		method: 'get',
@@ -36,14 +36,12 @@ const ValidProviders: Record<string, any> = {
 		url: 'https://cdpt.in/shorten?url=',
 		method: 'get',
 	},
-  '4hnet': {
+	'4hnet': {
 		url: 'https://4h.net/api.php?url=',
 		method: 'get',
 	},
 
-
-// POST APIS
-
+	// POST APIS
 
 	tinube: {
 		url: 'https://tinu.be/api/shorten',
@@ -53,17 +51,6 @@ const ValidProviders: Record<string, any> = {
 		},
 	},
 };
-
-type providers = 'isgd' | 'cdpt' | 'i8ae'| 'kroom' | 'tinyurl' | 'tinube' | '4hnet';
-
-/**
- *
- *
- * @interface IOptions
- */
-interface IOptions {
-	provider: providers;
-}
 
 /**
  *
@@ -75,12 +62,13 @@ interface IOptions {
  */
 export default async (
 	longUrl: string,
-	option: IOptions = { provider: 'isgd' },
+	option: IOptions = { provider: 'isgd', timeout: 2000 },
 ): Promise<IResponse> => {
 	try {
 		const response = await getAxios(
 			ValidProviders[option.provider],
 			longUrl,
+			option,
 		);
 		return responseMap(response, longUrl);
 	} catch (error) {
