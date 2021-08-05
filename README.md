@@ -25,7 +25,7 @@ yarn add url-minify
 # USAGE
 
 
-Currently 4 free providers are supported
+Currently 6 providers are supported
 
 ```ts
 import minify from 'url-minify';
