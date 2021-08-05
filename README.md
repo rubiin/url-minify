@@ -69,7 +69,6 @@ Url shortner supports the following providers.
 
 | Provider | Status |
 | -------- | ------ |
-| t.ly | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
 | is.gd | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
 | cdpt.in | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |
 | tinu.be | <p align="center"><code><img height="20" src="https://i.imgur.com/tG9nb8s.png"> |

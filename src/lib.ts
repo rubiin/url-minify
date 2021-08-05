@@ -49,14 +49,7 @@ const ValidProviders: Record<string, IProviders> = {
 		body: (val: string) => {
 			return { longUrl: val };
 		},
-	},
-	tly: {
-		url: 'https://t.ly/api/v1/link/shorten',
-		method: 'post',
-		body: (val: string) => {
-			return { long_url: val };
-		},
-	},
+	}
 };
 
 /**
@@ -79,6 +72,7 @@ export default async (
 		);
 		return responseMap(response, longUrl);
 	} catch (error) {
+    console.log(error);
 		throw new Error(error);
 	}
 };
