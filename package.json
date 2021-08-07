@@ -4,8 +4,9 @@
   "description": "Library to shorten url without any api keys",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
-    "minify": "uglifyjs dist/lib.js --compress --mangle -o dist/lib.js",
-    "build": "rimraf dist && tsc -p tsconfig.build.json --declaration && npm run minify",
+    "minify": "rimraf dist && mkdir dist && uglifyjs out/lib.js out/helper.js out/types.js --compress --mangle -o dist/lib.js",
+    "bundle-declaration":"dts-bundle-generator -o dist/lib.d.ts out/lib.d.ts",
+    "build": "rimraf out && tsc -p tsconfig.build.json --declaration && npm run minify && npm run bundle-declaration && rimraf out",
     "test": "jest"
   },
   "keywords": [
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.12",
+    "dts-bundle-generator": "^5.9.0",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
