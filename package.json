@@ -6,7 +6,8 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "minify": "rimraf dist && mkdir dist && uglifyjs out/helper.js out/types.js out/lib.js --compress --mangle -o dist/lib.js",
     "bundle-declaration": "dts-bundle-generator -o dist/lib.d.ts out/lib.d.ts",
-    "build": "rimraf dist && tsc -p tsconfig.build.json --declaration",
+    "build": "rimraf out && tsc -p tsconfig.build.json --declaration",
+    "bundle":"npm run minify && npm run bundle-declaration && rimraf out",
     "test": "jest"
   },
   "keywords": [

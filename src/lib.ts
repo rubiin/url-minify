@@ -49,7 +49,7 @@ const ValidProviders: Record<string, IProviders> = {
 		body: (val: string) => {
 			return { longUrl: val };
 		},
-	}
+	},
 };
 
 /**
@@ -72,7 +72,7 @@ export default async (
 		);
 		return responseMap(response, longUrl);
 	} catch (error) {
-    console.log(error);
+		console.log(error);
 		throw new Error(error);
 	}
 };

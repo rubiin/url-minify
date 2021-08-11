@@ -7,7 +7,7 @@
     "sourceMap": false,
     "target": "es2017",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./out",
     "removeComments": true,
     "skipLibCheck": false
   },
