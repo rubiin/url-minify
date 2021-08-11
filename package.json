@@ -1,13 +1,13 @@
 {
   "name": "url-minify",
-  "version": "2.2.9",
+  "version": "2.2.10",
   "description": "Library to shorten url without any api keys",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
     "minify": "rimraf dist && mkdir dist && uglifyjs out/helper.js out/types.js out/lib.js --compress --mangle -o dist/lib.js",
     "bundle-declaration": "dts-bundle-generator -o dist/lib.d.ts out/lib.d.ts",
     "build": "rimraf out && tsc -p tsconfig.build.json --declaration",
-    "bundle":"npm run minify && npm run bundle-declaration && rimraf out",
+    "bundle": "npm run minify && npm run bundle-declaration && rimraf out",
     "test": "jest"
   },
   "keywords": [
