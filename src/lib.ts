@@ -1,6 +1,67 @@
 import axios from 'axios';
-import { responseMap } from './helper';
-import { IOptions, IProviders, IResponse } from './types';
+
+/**
+ *
+ *
+ * @param {Record<any, any>} response
+ * @param {string} longUrl
+ * @return {*}  {IResponse}
+ */
+function responseMap(response: Record<any, any>, longUrl: string): IResponse {
+	const responseType = response.headers['content-type'].split(';')[0];
+	if (['text/plain', 'text/html'].includes(responseType)) {
+		return { longUrl, shortUrl: response.data };
+	} else {
+		// json response
+
+		if (response.data?.url) {
+			return { longUrl, shortUrl: response.data.url };
+		} else if (response.data?.shortUrl) {
+			return { longUrl, shortUrl: response.data.shortUrl };
+		} else if (response.data?.shortenedUrl) {
+			return { longUrl, shortUrl: response.data.shortenedUrl };
+		} else if (response.data?.short) {
+			return { longUrl, shortUrl: response.data.short };
+		} else if (response.data?.short_url) {
+			return { longUrl, shortUrl: response.data.short_url };
+		}
+	}
+}
+
+type providers = 'isgd' | 'cdpt' | 'kroom' | 'tinyurl' | 'tinube' | '4hnet';
+
+/**
+ *
+ *
+ * @interface IResponse
+ */
+interface IResponse {
+	longUrl: string;
+	shortUrl: string;
+}
+
+/**
+ *
+ *
+ * @interface IOptions
+ */
+interface IOptions {
+	provider?: providers;
+	timeout?: number;
+}
+
+/**
+ *
+ *
+ *
+ * @interface IProviders
+ */
+interface IProviders {
+	url: string;
+	method: string;
+	body?: any;
+	formData?: boolean;
+}
 
 /**
  *
@@ -72,7 +133,6 @@ export default async (
 		);
 		return responseMap(response, longUrl);
 	} catch (error) {
-		console.log(error);
 		throw new Error(error);
 	}
 };

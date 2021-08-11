@@ -2,7 +2,7 @@ import minify from '../src/lib';
 
 const url = 'https://rubiin.vercel.app';
 
-beforeAll(() => jest.setTimeout(1000 * 1000));
+beforeAll(() => jest.setTimeout(10000 * 1000));
 
 describe('should get a shortened url', () => {
 	it('should get shortened url with is.gd', async () => {
