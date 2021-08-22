@@ -35,12 +35,12 @@
   },
   "main": "dist/lib.min.js",
   "devDependencies": {
-    "@types/jest": "^27.0.0",
-    "@types/node": "^16.4.13",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.1",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "ts-jest": "^27.0.4",
+    "ts-jest": "^27.0.5",
     "typescript": "^4.3.5",
     "uglify-js": "^3.14.1"
   },
