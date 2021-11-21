@@ -1,6 +1,6 @@
 {
   "name": "url-minify",
-  "version": "2.2.12",
+  "version": "2.2.13",
   "description": "Library to shorten url without any api keys",
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\"",
