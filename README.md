@@ -1,7 +1,8 @@
  <p float="left">
 <a href="https://www.npmjs.com/package/url-minify"><img src="https://badgen.net/npm/v/url-minify" alt="NPM version" /></a>
  <a href="https://www.npmjs.com/package/url-minify"><img src="https://github.com/rubiin/tweeny-weeny/workflows/CI/badge.svg" alt="CI" /></a> 
- <a href="https://www.npmjs.com/package/url-minify"><img src="https://badgen.net/bundlephobia/min/url-minify" alt="Bundle Size" /></a> 
+ <a href="https://www.npmjs.com/package/url-minify"><img src="https://img.shields.io/npm/dm/url-minify" alt="Downloads" /></a> 
+  
 </p>
 
 # Minify Url
