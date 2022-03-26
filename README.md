@@ -61,12 +61,12 @@ Url shortner supports the following providers.
 
 | Provider    | Status |
 | ----------- | ------ |
-| is.gd       |    ✔️   |
-| cdpt.in     |    ✔️   |
-| tinu.be     |    ✔️   |
-| kroom.tk    |    ✔️   |
-| tinyurl.com |    ✔️   |
-| 4h.net      |    ✔️   |
+| is.gd       | ✔️     |
+| cdpt.in     | ✔️     |
+| tinu.be     | ✔️     |
+| kroom.tk    | ✔️     |
+| tinyurl.com | ✔️     |
+| 4h.net      | X      |
 
 ## Contributing
 

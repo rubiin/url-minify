@@ -105,7 +105,7 @@ const ValidProviders: Record<string, IProviders> = {
 	// POST APIS
 
 	tinube: {
-		url: 'https://tinu.be/api/shorten',
+		url: 'https://api.tinu.be/api/shorten',
 		method: 'post',
 		body: (val: string) => {
 			return { longUrl: val };
