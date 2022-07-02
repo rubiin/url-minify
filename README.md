@@ -64,8 +64,8 @@ Url shortner supports the following providers.
 | is.gd       | ✔️     |
 | cdpt.in     | ✔️     |
 | tinu.be     | ✔️     |
-| kroom.tk    | ✔️     |
-| tinyurl.com | ✔️     |
+| kroom.tk    | x     |
+| tinyurl.com | x     |
 | 4h.net      | X      |
 
 ## Contributing
