@@ -12,20 +12,25 @@ describe('should get a shortened url', () => {
 		expect(response.shortUrl).toMatch(/^https:\/\/is.gd\//);
 	});
 
-	it('should get shortened url with cdpt.in', async () => {
-		const response = await minify(url, { provider: 'cdpt' });
-		expect(response.shortUrl).toMatch(/^https:\/\/cdpt.in\//);
+
+	it('should get shortened url with v.gd', async () => {
+		const response = await minify(url, { provider: 'vgd' });
+		expect(response.shortUrl).toMatch(/^https:\/\/v.gd\//);
 	});
 
-
-
-	// 	it('should get shortened url with 4h.net', async () => {
-	// 	const response = await minify(url, { provider: '4hnet' });
-	// 		expect(response.shortUrl).toMatch(/^https:\/\/4h.net\//);
-	// });
+		it('should get shortened url with 4h.net', async () => {
+		const response = await minify(url, { provider: '4hnet' });
+			expect(response.shortUrl).toMatch(/^https:\/\/4h.net\//);
+	});
 
 	it('should get shortened url with tinu.be', async () => {
 		const response = await minify(url, { provider: 'tinube' });
 		expect(response.shortUrl).toMatch(/^https:\/\/tinu.be\//);
+	});
+
+	it('should get shortened url with rb.gy', async () => {
+		const response = await minify(url, { provider: 'rbgy' });
+		console.log(response);
+		expect(response.shortUrl).toMatch(/^https:\/\/rb.gy\//);
 	});
 });

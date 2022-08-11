@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 
 
 
-type providers = 'isgd' | 'cdpt' | 'kroom' | 'tinyurl' | 'tinube' | '4hnet';
+type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy';
 
 /**
  *
@@ -60,7 +60,8 @@ function responseMap(response: Record<any, any>, longUrl: string): IResponse {
 		} else if (response.data?.short_url) {
 			return { longUrl, shortUrl: response.data.short_url };
 		}
-	} 
+
+	}
 
 	return { longUrl, shortUrl: response.data };
 }
@@ -93,10 +94,17 @@ const ValidProviders: Record<string, IProviders> = {
 		url: 'https://cdpt.in/shorten?url=',
 		method: 'get',
 	},
-	'4hnet': {
-		url: 'https://4h.net/api.php?url=',
+	vgd: {
+		url: 'https://v.gd/create.php?format=simple&url=',
 		method: 'get',
 	},
+
+	'4hnet': {
+		url: 'https://4h.net/api/?url=',
+		method: 'get',
+	},
+
+
 
 	// POST APIS
 
@@ -105,6 +113,14 @@ const ValidProviders: Record<string, IProviders> = {
 		method: 'post',
 		body: (val: string) => {
 			return { longUrl: val };
+		},
+	},
+
+	rbgy: {
+		url: 'https://free-url-shortener.rb.gy/shorten',
+		method: 'post',
+		body: (val: string) => {
+			return { destination: val, "dryRun": true }
 		},
 	},
 };
@@ -129,6 +145,6 @@ export default async (
 		);
 		return responseMap(response, longUrl);
 	} catch (error) {
-		throw new Error('Something went wrong');
+		throw error;
 	}
 };

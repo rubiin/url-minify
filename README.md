@@ -47,7 +47,7 @@ Type: `object`
 Type: `string`
 
 Service to use for shortening links. Defaults to `isgd`
-Available providers: `'isgd'| 'cdpt'| 'kroom'| 'tinyurl'| 'tinube'| '4hnet'`
+Available providers: `'isgd'| 'cdpt'| 'vgd'| 'tinube'| '4hnet'`
 
 ##### timeout
 
@@ -61,12 +61,12 @@ Url shortner supports the following providers.
 
 | Provider    | Status |
 | ----------- | ------ |
-| is.gd       | ✔️     |
-| cdpt.in     | ✔️     |
-| tinu.be     | ✔️     |
-| kroom.tk    | x     |
-| tinyurl.com | x     |
-| 4h.net      | X      |
+| is.gd       | ✔️      |
+| cdpt.in     | x      |
+| tinu.be     | ✔️      |
+| v.gd	      | ✔️      |
+| rb.gy				| ✔️      |
+| 4h.net      | ✔️      |
 
 ## Contributing
 
