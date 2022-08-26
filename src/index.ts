@@ -1,8 +1,8 @@
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 
 
 
-type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl';
+type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya';
 
 /**
  *
@@ -46,7 +46,7 @@ interface IProviders {
  * @param {string} longUrl
  * @return {*}  {IResponse}
  */
-function responseMap(response: Record<any, any>, longUrl: string): IResponse {
+function responseMap(response: Record<any, any>, longUrl: string,provider: providers): IResponse {
 	const responseType = response.headers['content-type'].split(';')[0];
 	if (!['text/plain', 'text/html'].includes(responseType)) {
 		if (response.data?.url) {
@@ -62,7 +62,19 @@ function responseMap(response: Record<any, any>, longUrl: string): IResponse {
 		}
 	}
 
-	return { longUrl, shortUrl: response.data };
+	if(['haha','pwm','cya'].includes(provider)){
+
+
+		return { longUrl, shortUrl: `https://${provider}.se/${response.data}` };
+
+	}
+
+
+		return { longUrl, shortUrl: response.data };
+	
+
+
+
 }
 
 
@@ -97,12 +109,25 @@ const ValidProviders: Record<string, IProviders> = {
 		url: 'https://v.gd/create.php?format=simple&url=',
 		method: 'get',
 	},
+	haha: {
+		url: 'https://www.haha.se/lank.php?dataLank=',
+		method: 'get',
+	},
+
+	cya: {
+		url: 'https://www.haha.se/lank.php?dataLank=',
+		method: 'get',
+	},
+
+	pwm: {
+		url: 'https://www.haha.se/lank.php?dataLank=',
+		method: 'get',
+	},
 
 	'4hnet': {
 		url: 'https://4h.net/api/?url=',
 		method: 'get',
 	},
-
 
 	vurl: {
 		url: 'https://vurl.com/api.php?url=',
@@ -145,7 +170,7 @@ export default async (
 			longUrl,
 			option,
 		);
-		return responseMap(response, longUrl);
+		return responseMap(response, longUrl, option.provider);
 	} catch (error) {
 		throw error;
 	}

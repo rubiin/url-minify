@@ -37,4 +37,21 @@ describe('should get a shortened url', () => {
 		const response = await minify(url, { provider: 'vurl' });
 		expect(response.shortUrl).toMatch(/^https:\/\/vurl.com\//);
 	});
+
+
+	it('should get shortened url with haha.se', async () => {
+		const response = await minify(url, { provider: 'haha' });
+		expect(response.shortUrl).toMatch(/^https:\/\/haha.se\//);
+	});
+
+	it('should get shortened url with pwm.se', async () => {
+		const response = await minify(url, { provider: 'pwm' });
+		expect(response.shortUrl).toMatch(/^https:\/\/pwm.se\//);
+	});
+
+
+	it('should get shortened url with cya.se', async () => {
+		const response = await minify(url, { provider: 'cya' });
+		expect(response.shortUrl).toMatch(/^https:\/\/cya.se\//);
+	});
 });

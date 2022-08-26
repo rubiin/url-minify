@@ -47,7 +47,7 @@ Type: `object`
 Type: `string`
 
 Service to use for shortening links. Defaults to `isgd`
-Available providers: `'isgd'| 'cdpt'| 'vgd'| 'tinube'| '4hnet'`
+Available providers: `''isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya'`
 
 ##### timeout
 
@@ -68,6 +68,9 @@ Url shortner supports the following providers.
 | rb.gy				| ✔️      |
 | 4h.net      | ✔️      |
 | vurl.com    | ✔️      |
+| pwn.se      | ✔️      |
+| haha.se     | ✔️      |
+| cya.se      | ✔️      |
 
 ## Contributing
 
