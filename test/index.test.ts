@@ -30,7 +30,11 @@ describe('should get a shortened url', () => {
 
 	it('should get shortened url with rb.gy', async () => {
 		const response = await minify(url, { provider: 'rbgy' });
-		console.log(response);
 		expect(response.shortUrl).toMatch(/^https:\/\/rb.gy\//);
+	});
+
+	it('should get shortened url with vurl.com', async () => {
+		const response = await minify(url, { provider: 'vurl' });
+		expect(response.shortUrl).toMatch(/^https:\/\/vurl.com\//);
 	});
 });

@@ -2,7 +2,7 @@ import axios, { AxiosError } from 'axios';
 
 
 
-type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy';
+type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl';
 
 /**
  *
@@ -60,7 +60,6 @@ function responseMap(response: Record<any, any>, longUrl: string): IResponse {
 		} else if (response.data?.short_url) {
 			return { longUrl, shortUrl: response.data.short_url };
 		}
-
 	}
 
 	return { longUrl, shortUrl: response.data };
@@ -105,7 +104,10 @@ const ValidProviders: Record<string, IProviders> = {
 	},
 
 
-
+	vurl: {
+		url: 'https://vurl.com/api.php?url=',
+		method: 'get',
+	},
 	// POST APIS
 
 	tinube: {

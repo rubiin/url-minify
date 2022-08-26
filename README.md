@@ -67,6 +67,7 @@ Url shortner supports the following providers.
 | v.gd	      | ✔️      |
 | rb.gy				| ✔️      |
 | 4h.net      | ✔️      |
+| vurl.com    | ✔️      |
 
 ## Contributing
 
