@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 
-type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya';
+type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya' | 'hideuri';
 
 /**
  *
@@ -59,6 +59,8 @@ function responseMap(response: Record<any, any>, longUrl: string,provider: provi
 			return { longUrl, shortUrl: response.data.short };
 		} else if (response.data?.short_url) {
 			return { longUrl, shortUrl: response.data.short_url };
+		} else if (response.data?.result_url) {
+			return { longUrl, shortUrl: response.data.result_url };
 		}
 	}
 
@@ -140,6 +142,14 @@ const ValidProviders: Record<string, IProviders> = {
 		method: 'post',
 		body: (val: string) => {
 			return { longUrl: val };
+		},
+	},
+
+	hideuri: {
+		url: 'https://hideuri.com/api/v1/shorten',
+		method: 'post',
+		body: (val: string) => {
+			return { url: val };
 		},
 	},
 

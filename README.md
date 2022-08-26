@@ -47,7 +47,7 @@ Type: `object`
 Type: `string`
 
 Service to use for shortening links. Defaults to `isgd`
-Available providers: `''isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya'`
+Available providers: `''isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya' | 'hideuri`
 
 ##### timeout
 
@@ -71,6 +71,7 @@ Url shortner supports the following providers.
 | pwn.se      | ✔️      |
 | haha.se     | ✔️      |
 | cya.se      | ✔️      |
+| hideuri.com | ✔️      |
 
 ## Contributing
 
