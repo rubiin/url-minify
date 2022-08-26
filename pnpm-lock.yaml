@@ -6,6 +6,7 @@ specifiers:
   '@types/node': ^18.7.13
   axios: ^0.27.2
   bumpp: ^8.2.1
+  clean-publish: ^4.0.1
   eslint: ^8.22.0
   esno: ^0.16.3
   rimraf: ^3.0.2
@@ -22,6 +23,7 @@ devDependencies:
   '@antfu/ni': 0.17.2
   '@types/node': 18.7.13
   bumpp: 8.2.1
+  clean-publish: 4.0.1
   eslint: 8.22.0
   esno: 0.16.3
   rimraf: 3.0.2
@@ -982,6 +984,17 @@ packages:
 
   /ci-info/3.3.2:
     resolution: {integrity: sha512-xmDt/QIAdeZ9+nfdPsaBCpMvHNLFiLdjj59qjqn+6iPe6YmHGQ35sBnQ8uslRBXFmXkiZQOJRjvQeoGppoTjjg==}
+    dev: true
+
+  /clean-publish/4.0.1:
+    resolution: {integrity: sha512-6v0bh5kQD5FDlxBgXDVNNc6KmAB7iIP/GHD91q9xsGVZT5XB9Y8TNqB7dL5u9PTZlBeLpBw+A1AseRlEEJLSWA==}
+    engines: {node: '>= 16.0.0'}
+    hasBin: true
+    dependencies:
+      cross-spawn: 7.0.3
+      fast-glob: 3.2.11
+      lilconfig: 2.0.6
+      micromatch: 4.0.5
     dev: true
 
   /clean-regexp/1.0.0:
@@ -2614,6 +2627,11 @@ packages:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+    dev: true
+
+  /lilconfig/2.0.6:
+    resolution: {integrity: sha512-9JROoBW7pobfsx+Sq2JsASvCo6Pfo6WWoUW79HuB1BCoBXD4PLWJPqDF6fNj67pqBYTbAHkE57M1kS/+L1neOg==}
+    engines: {node: '>=10'}
     dev: true
 
   /lines-and-columns/1.2.4:

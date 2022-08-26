@@ -39,7 +39,7 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "nr build && clean-publish",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
@@ -56,7 +56,8 @@
     "typescript": "^4.8.2",
     "unbuild": "^0.8.9",
     "vite": "^3.0.9",
-    "vitest": "^0.22.1"
+    "vitest": "^0.22.1",
+    "clean-publish": "^4.0.1"
   },
   "dependencies": {
     "axios": "^0.27.2"
