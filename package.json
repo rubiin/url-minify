@@ -39,8 +39,8 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepublishOnly": "nr build && clean-publish",
-    "release": "bumpp && npm publish",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && clean-publish",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
