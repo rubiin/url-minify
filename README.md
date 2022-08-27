@@ -2,7 +2,6 @@
 <a href="https://www.npmjs.com/package/url-minify"><img src="https://badgen.net/npm/v/url-minify" alt="NPM version" /></a>
  <a href="https://www.npmjs.com/package/url-minify"><img src="https://github.com/rubiin/tweeny-weeny/workflows/CI/badge.svg" alt="CI" /></a> 
  <a href="https://www.npmjs.com/package/url-minify"><img src="https://img.shields.io/npm/dm/url-minify" alt="Downloads" /></a> 
-  
 </p>
 
 # Minify Url
@@ -20,7 +19,7 @@ yarn add url-minify
 
 # USAGE
 
-Currently 6 providers are supported
+Currently 12 providers are supported
 
 ```ts
 import minify from 'url-minify';
@@ -62,7 +61,7 @@ Url shortner supports the following providers.
 | Provider    | Status |
 | ----------- | ------ |
 | is.gd       | ✔️      |
-| cdpt.in     | x      |
+| cdpt.in     | ✔️      |
 | tinu.be     | ✔️      |
 | v.gd	      | ✔️      |
 | rb.gy				| ✔️      |
@@ -72,6 +71,7 @@ Url shortner supports the following providers.
 | haha.se     | ✔️      |
 | cya.se      | ✔️      |
 | hideuri.com | ✔️      |
+| tny.im 			| ✔️      |
 
 ## Contributing
 

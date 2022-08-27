@@ -59,4 +59,10 @@ describe('should get a shortened url', () => {
 		const response = await minify(url, { provider: 'cya' });
 		expect(response.shortUrl).toMatch(/^https:\/\/cya.se\//);
 	});
+
+
+	it('should get shortened url with tnyim', async () => {
+		const response = await minify(url, { provider: 'tnyim' });
+		expect(response.shortUrl).toMatch(/^http:\/\/tny.im\//);
+	});
 });

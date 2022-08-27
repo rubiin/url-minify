@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 
-type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya' | 'hideuri';
+type providers = 'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'tinube' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya' | 'hideuri' | 'tnyim';
 
 /**
  *
@@ -123,6 +123,11 @@ const ValidProviders: Record<string, IProviders> = {
 
 	pwm: {
 		url: 'https://www.haha.se/lank.php?dataLank=',
+		method: 'get',
+	},
+
+	tnyim: {
+		url: 'http://tny.im/yourls-api.php?action=shorturl&format=simple&url=',
 		method: 'get',
 	},
 
