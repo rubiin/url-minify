@@ -1,7 +1,7 @@
  <p float="left">
 <a href="https://www.npmjs.com/package/url-minify"><img src="https://badgen.net/npm/v/url-minify" alt="NPM version" /></a>
- <a href="https://www.npmjs.com/package/url-minify"><img src="https://github.com/rubiin/tweeny-weeny/workflows/CI/badge.svg" alt="CI" /></a> 
- <a href="https://www.npmjs.com/package/url-minify"><img src="https://img.shields.io/npm/dm/url-minify" alt="Downloads" /></a> 
+ <a href="https://www.npmjs.com/package/url-minify"><img src="https://github.com/rubiin/tweeny-weeny/workflows/CI/badge.svg" alt="CI" /></a>
+ <a href="https://www.npmjs.com/package/url-minify"><img src="https://img.shields.io/npm/dm/url-minify" alt="Downloads" /></a>
 </p>
 
 # Minify Url
@@ -23,6 +23,20 @@ Currently 12 providers are supported
 
 ```ts
 import minify from 'url-minify';
+
+~(async function () {
+	console.log(
+		await minify('https://rubiin.vercel.app', { provider: 'isgd' }),
+	);
+
+	// ==> {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
+})();
+```
+
+
+
+```js
+const minify = require('url-minify').default;
 
 ~(async function () {
 	console.log(

@@ -73,7 +73,7 @@ function responseMap(response: Record<any, any>, longUrl: string,provider: provi
 
 
 		return { longUrl, shortUrl: response.data };
-	
+
 
 
 
@@ -175,7 +175,7 @@ const ValidProviders: Record<string, IProviders> = {
  * @param {IOptions} option
  * @return {IResponse}
  */
-export default async (
+const minify =  async (
 	longUrl: string,
 	option: IOptions = { provider: 'isgd', timeout: 2000 },
 ): Promise<IResponse> => {
@@ -190,3 +190,6 @@ export default async (
 		throw error;
 	}
 };
+
+
+export default minify;
