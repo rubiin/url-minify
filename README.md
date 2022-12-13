@@ -21,6 +21,8 @@ yarn add url-minify
 
 Currently 12 providers are supported
 
+For typescript
+
 ```ts
 import minify from 'url-minify';
 
@@ -33,7 +35,7 @@ import minify from 'url-minify';
 })();
 ```
 
-
+For plain js
 
 ```js
 const minify = require('url-minify').default;
