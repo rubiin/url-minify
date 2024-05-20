@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.43.1
   '@antfu/ni': ^0.21.12
-  '@types/node': ^18.19.33
+  '@types/node': ^20.12.12
   axios: ^1.7.0
   bumpp: ^8.2.1
   clean-publish: ^4.4.0
@@ -23,7 +23,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.43.1_4lxgoysztp3gakdxqfzw7vhg4u
   '@antfu/ni': 0.21.12
-  '@types/node': 18.19.33
+  '@types/node': 20.12.12
   bumpp: 8.2.1
   clean-publish: 4.4.0
   eslint: 8.57.0
@@ -33,7 +33,7 @@ devDependencies:
   tsup: 6.7.0_typescript@4.9.5
   typescript: 4.9.5
   unbuild: 1.2.1
-  vite: 4.5.3_@types+node@18.19.33
+  vite: 4.5.3_@types+node@20.12.12
   vitest: 0.34.6
 
 packages:
@@ -1306,8 +1306,8 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /@types/node/18.19.33:
-    resolution: {integrity: sha512-NR9+KrpSajr2qBVp/Yt5TU/rp+b5Mayi3+OlMlcg2cVCfRmcG5PWZ7S4+MG9PZ5gWBoc9Pd0BKSRViuBCRPu0A==}
+  /@types/node/20.12.12:
+    resolution: {integrity: sha512-eWLDGF/FOSPtAvEqeRAQ4C8LSA7M1I7i0ky1I8U7kD1J5ITyW3AsRhQrKVoWf5pFKZ2kILsEGJhsI9r93PYnOw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -4778,7 +4778,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-node/0.34.6_@types+node@18.19.33:
+  /vite-node/0.34.6_@types+node@20.12.12:
     resolution: {integrity: sha512-nlBMJ9x6n7/Amaz6F3zJ97EBwR2FkzhBRxF5e+jE6LA3yi6Wtc2lyTij1OnDMIr34v5g/tVQtsVAzhT0jc5ygA==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -4788,7 +4788,7 @@ packages:
       mlly: 1.7.0
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 4.5.3_@types+node@18.19.33
+      vite: 4.5.3_@types+node@20.12.12
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4800,7 +4800,7 @@ packages:
       - terser
     dev: true
 
-  /vite/4.5.3_@types+node@18.19.33:
+  /vite/4.5.3_@types+node@20.12.12:
     resolution: {integrity: sha512-kQL23kMeX92v3ph7IauVkXkikdDRsYMGTVl5KY2E9OY4ONLvkHf04MDTbnfo6NKxZiDLWzVpP5oTa8hQD8U3dg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4828,7 +4828,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 20.12.12
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
@@ -4869,7 +4869,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.15
       '@types/chai-subset': 1.3.3
-      '@types/node': 18.19.33
+      '@types/node': 20.12.12
       '@vitest/expect': 0.34.6
       '@vitest/runner': 0.34.6
       '@vitest/snapshot': 0.34.6
@@ -4888,8 +4888,8 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.8.0
       tinypool: 0.7.0
-      vite: 4.5.3_@types+node@18.19.33
-      vite-node: 0.34.6_@types+node@18.19.33
+      vite: 4.5.3_@types+node@20.12.12
+      vite-node: 0.34.6_@types+node@20.12.12
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
