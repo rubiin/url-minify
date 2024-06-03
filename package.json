@@ -47,7 +47,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",
     "@antfu/ni": "^0.21.12",
-    "@types/node": "^20.12.12",
+    "@types/node": "^20.14.0",
     "bumpp": "^9.4.1",
     "clean-publish": "^5.0.0",
     "eslint": "^8.57.0",
