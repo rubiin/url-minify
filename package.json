@@ -48,7 +48,7 @@
     "@antfu/eslint-config": "^0.43.1",
     "@antfu/ni": "^0.22.4",
     "@types/node": "^22.9.0",
-    "bumpp": "^9.5.2",
+    "bumpp": "^10.0.3",
     "clean-publish": "^5.0.0",
     "eslint": "^8.57.0",
     "esno": "^4.7.0",
