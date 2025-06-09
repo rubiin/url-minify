@@ -47,9 +47,9 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",
     "@antfu/ni": "^24.4.0",
-    "@types/node": "^22.15.21",
+    "@types/node": "^22.15.30",
     "bumpp": "^9.11.1",
-    "clean-publish": "^5.2.0",
+    "clean-publish": "^5.2.1",
     "eslint": "^8.57.1",
     "esno": "^4.8.0",
     "prettier": "^3.5.3",
