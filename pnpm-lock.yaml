@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.43.1
-  '@antfu/ni': ^24.4.0
+  '@antfu/ni': ^25.0.0
   '@types/node': ^22.15.30
   axios: ^1.9.0
   bumpp: ^9.11.1
@@ -22,7 +22,7 @@ dependencies:
 
 devDependencies:
   '@antfu/eslint-config': 0.43.1_hzt6xcfnpp4qecssyxfdrtmoeu
-  '@antfu/ni': 24.4.0
+  '@antfu/ni': 25.0.0
   '@types/node': 22.15.30
   bumpp: 9.11.1
   clean-publish: 5.2.1
@@ -145,8 +145,8 @@ packages:
       - typescript
     dev: true
 
-  /@antfu/ni/24.4.0:
-    resolution: {integrity: sha512-ZjriRbGyWGSrBE1RY2qBIXyilejMWLDWh2Go2dqFottyiuOze36+BpPch2z2WnGEgEbzTBVPetMmQvt0xt+iww==}
+  /@antfu/ni/25.0.0:
+    resolution: {integrity: sha512-9q/yCljni37pkMr4sPrI3G4jqdIk074+iukc5aFJl7kmDCCsiJrbZ6zKxnES1Gwg+i9RcDZwvktl23puGslmvA==}
     hasBin: true
     dependencies:
       ansis: 4.0.0
