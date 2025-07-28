@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.43.1
   '@antfu/ni': ^25.0.0
   '@types/node': ^22.16.5
-  axios: ^1.10.0
+  axios: ^1.11.0
   bumpp: ^9.11.1
   clean-publish: ^5.2.2
   eslint: ^8.57.1
@@ -14,7 +14,7 @@ specifiers:
   tsup: ^8.5.0
   typescript: ^5.8.3
   unbuild: ^2.0.0
-  vite: ^7.0.5
+  vite: ^7.0.6
   vitest: ^2.0.5
 
 dependencies:
@@ -33,7 +33,7 @@ devDependencies:
   tsup: 8.5.0_typescript@5.8.3
   typescript: 5.8.3
   unbuild: 2.0.0_typescript@5.8.3
-  vite: 7.0.5_@types+node@22.16.5
+  vite: 7.0.6_@types+node@22.16.5
   vitest: 2.1.4_@types+node@22.16.5
 
 packages:
@@ -1411,7 +1411,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.4.0
+      debug: 4.4.1
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
@@ -1434,7 +1434,7 @@ packages:
     deprecated: Use @eslint/config-array instead
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
-      debug: 4.4.0
+      debug: 4.4.1
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -3610,6 +3610,17 @@ packages:
       picomatch: 4.0.2
     dev: true
 
+  /fdir/6.4.6_picomatch@4.0.3:
+    resolution: {integrity: sha512-hiFoqpyZcfNm1yc4u8oWCf9A2c4D3QjCrks3zmoVKVxpQRzmPNar1hUJcBG2RQHvEVGDN+Jm81ZheVLAQMK6+w==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
+    dependencies:
+      picomatch: 4.0.3
+    dev: true
+
   /file-entry-cache/6.0.1:
     resolution: {integrity: sha512-7Gps/XWymbLk2QLYK4NzpMOrYjMhdIxXuIvy2QBsLE6ljuodKvdkWs/cpyJJ3CVIVpH0Oi1Hvg1ovbMzLdFBBg==}
     engines: {node: ^10.12.0 || >=12.0.0}
@@ -4665,6 +4676,11 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
+  /picomatch/4.0.3:
+    resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
+    engines: {node: '>=12'}
+    dev: true
+
   /pirates/4.0.6:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
@@ -5535,8 +5551,8 @@ packages:
     resolution: {integrity: sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      fdir: 6.4.6_picomatch@4.0.2
-      picomatch: 4.0.2
+      fdir: 6.4.6_picomatch@4.0.3
+      picomatch: 4.0.3
     dev: true
 
   /tinypool/1.0.1:
@@ -5789,7 +5805,7 @@ packages:
     hasBin: true
     dependencies:
       cac: 6.7.14
-      debug: 4.3.7
+      debug: 4.4.1
       pathe: 1.1.2
       vite: 5.4.19_@types+node@22.16.5
     transitivePeerDependencies:
@@ -5843,8 +5859,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vite/7.0.5_@types+node@22.16.5:
-    resolution: {integrity: sha512-1mncVwJxy2C9ThLwz0+2GKZyEXuC3MyWtAAlNftlZZXZDP3AJt5FmwcMit/IGGaNZ8ZOB2BNO/HFUB+CpN0NQw==}
+  /vite/7.0.6_@types+node@22.16.5:
+    resolution: {integrity: sha512-MHFiOENNBd+Bd9uvc8GEsIzdkn1JxMmEeYX35tI3fv0sJBUTfW5tQsoaOwuY4KhBI09A3dUJ/DXf2yxPVPUceg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -5885,8 +5901,8 @@ packages:
     dependencies:
       '@types/node': 22.16.5
       esbuild: 0.25.1
-      fdir: 6.4.6_picomatch@4.0.2
-      picomatch: 4.0.2
+      fdir: 6.4.6_picomatch@4.0.3
+      picomatch: 4.0.3
       postcss: 8.5.6
       rollup: 4.44.1
       tinyglobby: 0.2.14
