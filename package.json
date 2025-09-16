@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@antfu/ni": "^25.0.0",
-    "@types/node": "^22.18.3",
+    "@types/node": "^22.18.4",
     "bumpp": "^10.2.3",
     "clean-publish": "^5.2.2",
     "esno": "^4.8.0",
@@ -57,11 +57,11 @@
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",
     "unbuild": "^3.6.1",
-    "vite": "^7.0.7",
-    "vitest": "^2.1.9"
+    "vite": "^7.1.5",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
-    "axios": "^1.12.1"
+    "axios": "^1.12.2"
   },
   "clean-publish": {
     "cleanDocs": true,
