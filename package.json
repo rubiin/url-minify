@@ -48,7 +48,7 @@
   "devDependencies": {
     "@antfu/ni": "^26.1.0",
     "@types/node": "^22.18.8",
-    "bumpp": "^10.2.3",
+    "bumpp": "^10.3.0",
     "clean-publish": "^5.2.2",
     "esno": "^4.8.0",
     "oxlint": "^1.19.0",
