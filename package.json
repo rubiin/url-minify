@@ -3,7 +3,7 @@
   "version": "2.8.5",
   "description": "Library to shorten url without any api keys",
   "type": "module",
-  "packageManager": "pnpm@10.18.2",
+  "packageManager": "pnpm@10.18.3",
   "author": "Rubin Bhandari <roobin.bhandari@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/rubiin/url-minify#readme",
@@ -46,18 +46,18 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/ni": "^26.1.0",
-    "@types/node": "^22.18.10",
+    "@antfu/ni": "^26.2.0",
+    "@types/node": "^22.18.11",
     "bumpp": "^10.3.1",
     "clean-publish": "^5.2.2",
     "esno": "^4.8.0",
-    "oxlint": "^1.22.0",
+    "oxlint": "^1.23.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.3",
     "unbuild": "^3.6.1",
-    "vite": "^7.1.9",
+    "vite": "^7.1.10",
     "vitest": "^3.2.4"
   },
   "dependencies": {
