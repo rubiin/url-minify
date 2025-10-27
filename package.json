@@ -46,7 +46,7 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/ni": "^26.2.0",
+    "@antfu/ni": "^27.0.1",
     "@types/node": "^22.18.12",
     "bumpp": "^10.3.1",
     "clean-publish": "^5.2.2",
