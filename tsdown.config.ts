@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup'
+import { defineConfig } from 'tsdown'
 
 export default defineConfig({
   entry: [
@@ -13,4 +13,5 @@ export default defineConfig({
   splitting: true,
   minifyWhitespace: true,
   minifyIdentifiers: true,
+  target: false,
 })

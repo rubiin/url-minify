@@ -152,7 +152,7 @@ const minify = async (
 longUrl: string,
 option: IOptions = { provider: "isgd", timeout: 2000 },
 ): Promise<IResponse> => {
-const response = await getAxios(ValidProviders[option.provider], longUrl, option);
+const response = await getAxios(ValidProviders[option.provider]!, longUrl, option);
 return responseMap(response, longUrl, option.provider);
 };
 
