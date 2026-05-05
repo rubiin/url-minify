@@ -1,12 +1,10 @@
 {
   "extends": "@rubiin/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "target": "es2022",
-    "module": "esnext",
-    "lib": ["esnext"],
-    "strictNullChecks": true,
-    "skipDefaultLibCheck": true,
-    "incremental": false,
-    "rootDir": "./src"
+  	"module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "types": ["node", "vitest/globals"],
+    "rootDir": "."
   }
 }
