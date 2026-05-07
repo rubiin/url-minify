@@ -15,4 +15,7 @@ jobs:
           cache: "pnpm"
 
       - run: pnpm install --shamefully-hoist=true
-      - run: pnpm run lint && pnpm run build
+      - run: pnpm format:check
+      - run: pnpm lint
+      - run: pnpm test
+      - run: pnpm build
