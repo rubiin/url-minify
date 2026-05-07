@@ -10,8 +10,6 @@ export default defineConfig({
   ],
   dts: true,
   clean: true,
-  splitting: true,
-  minifyWhitespace: true,
-  minifyIdentifiers: true,
-  target: false,
+  minify: true,
+  exports: true
 })
