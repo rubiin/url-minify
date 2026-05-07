@@ -1,23 +1,11 @@
 {
-  "trailingComma": "all",
-  "bracketSpacing": true,
-  "arrowParens": "avoid",
-  "useTabs": false,
-  "tabWidth": 0,
-  "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "css",
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
   "printWidth": 100,
-  "proseWrap": "preserve",
-  "requirePragma": false,
+  "tabWidth": 2,
+  "useTabs": false,
   "semi": true,
   "singleQuote": false,
-  "vueIndentScriptAndStyle": true,
-  "overrides": [
-    {
-      "files": "*.json",
-      "options": {
-        "printWidth": 200
-      }
-    }
-  ]
+  "trailingComma": "all",
+  "ignorePatterns": ["dist/**", "*.min.js", "temp/**", "coverage/**"],
+  "sortPackageJson": true
 }

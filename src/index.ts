@@ -1,24 +1,24 @@
 import axios from "axios";
 
 type providers =
-| "isgd"
-| "cdpt"
-| "vgd"
-| "4hnet"
-| "rbgy"
-| "vurl"
-| "haha"
-| "pwm"
-| "cya"
-| "hideuri";
+  | "isgd"
+  | "cdpt"
+  | "vgd"
+  | "4hnet"
+  | "rbgy"
+  | "vurl"
+  | "haha"
+  | "pwm"
+  | "cya"
+  | "hideuri";
 /**
  *
  *
  * @interface IResponse
  */
 interface IResponse {
-longUrl: string;
-shortUrl: string;
+  longUrl: string;
+  shortUrl: string;
 }
 
 /**
@@ -27,8 +27,8 @@ shortUrl: string;
  * @interface IOptions
  */
 interface IOptions {
-provider: providers;
-timeout?: number;
+  provider: providers;
+  timeout?: number;
 }
 
 /**
@@ -38,10 +38,10 @@ timeout?: number;
  * @interface IProviders
  */
 interface IProviders {
-url: string;
-method: string;
-body?: any;
-formData?: boolean;
+  url: string;
+  method: string;
+  body?: any;
+  formData?: boolean;
 }
 
 /**
@@ -52,20 +52,20 @@ formData?: boolean;
  * @return {*}  {IResponse}
  */
 function responseMap(response: Record<any, any>, longUrl: string, provider: providers): IResponse {
-const responseType = response.headers["content-type"].split(";")[0];
-if (!["text/plain", "text/html"].includes(responseType)) {
-if (response.data?.url) return { longUrl, shortUrl: response.data.url };
-else if (response.data?.shortUrl) return { longUrl, shortUrl: response.data.shortUrl };
-else if (response.data?.shortenedUrl) return { longUrl, shortUrl: response.data.shortenedUrl };
-else if (response.data?.short) return { longUrl, shortUrl: response.data.short };
-else if (response.data?.short_url) return { longUrl, shortUrl: response.data.short_url };
-else if (response.data?.result_url) return { longUrl, shortUrl: response.data.result_url };
-}
+  const responseType = response.headers["content-type"].split(";")[0];
+  if (!["text/plain", "text/html"].includes(responseType)) {
+    if (response.data?.url) return { longUrl, shortUrl: response.data.url };
+    else if (response.data?.shortUrl) return { longUrl, shortUrl: response.data.shortUrl };
+    else if (response.data?.shortenedUrl) return { longUrl, shortUrl: response.data.shortenedUrl };
+    else if (response.data?.short) return { longUrl, shortUrl: response.data.short };
+    else if (response.data?.short_url) return { longUrl, shortUrl: response.data.short_url };
+    else if (response.data?.result_url) return { longUrl, shortUrl: response.data.result_url };
+  }
 
-if (["haha", "pwm", "cya"].includes(provider))
-return { longUrl, shortUrl: `https://${provider}.se/${response.data}` };
+  if (["haha", "pwm", "cya"].includes(provider))
+    return { longUrl, shortUrl: `https://${provider}.se/${response.data}` };
 
-return { longUrl, shortUrl: response.data };
+  return { longUrl, shortUrl: response.data };
 }
 
 /**
@@ -76,68 +76,68 @@ return { longUrl, shortUrl: response.data };
  * @return {*}
  */
 const getAxios = (provider: IProviders, longUrl: string, option: IOptions) => {
-if (provider.method === "get") {
-return axios.get(provider.url + longUrl, { timeout: option.timeout });
-} else {
-return axios.post(provider.url, provider.body(longUrl), {
-timeout: option.timeout,
-});
-}
+  if (provider.method === "get") {
+    return axios.get(provider.url + longUrl, { timeout: option.timeout });
+  } else {
+    return axios.post(provider.url, provider.body(longUrl), {
+      timeout: option.timeout,
+    });
+  }
 };
 
 const ValidProviders: Record<string, IProviders> = {
-isgd: {
-url: "https://is.gd/create.php?format=simple&url=",
-method: "get",
-},
-cdpt: {
-url: "https://cdpt.in/shorten?url=",
-method: "get",
-},
-vgd: {
-url: "https://v.gd/create.php?format=simple&url=",
-method: "get",
-},
-haha: {
-url: "https://www.haha.se/lank.php?dataLank=",
-method: "get",
-},
+  isgd: {
+    url: "https://is.gd/create.php?format=simple&url=",
+    method: "get",
+  },
+  cdpt: {
+    url: "https://cdpt.in/shorten?url=",
+    method: "get",
+  },
+  vgd: {
+    url: "https://v.gd/create.php?format=simple&url=",
+    method: "get",
+  },
+  haha: {
+    url: "https://www.haha.se/lank.php?dataLank=",
+    method: "get",
+  },
 
-cya: {
-url: "https://www.haha.se/lank.php?dataLank=",
-method: "get",
-},
+  cya: {
+    url: "https://www.haha.se/lank.php?dataLank=",
+    method: "get",
+  },
 
-pwm: {
-url: "https://www.haha.se/lank.php?dataLank=",
-method: "get",
-},
-"4hnet": {
-url: "https://4h.net/api/?url=",
-method: "get",
-},
+  pwm: {
+    url: "https://www.haha.se/lank.php?dataLank=",
+    method: "get",
+  },
+  "4hnet": {
+    url: "https://4h.net/api/?url=",
+    method: "get",
+  },
 
-vurl: {
-url: "https://vurl.com/api.php?url=",
-method: "get",
-},
-// POST APIS
+  vurl: {
+    url: "https://vurl.com/api.php?url=",
+    method: "get",
+  },
+  // POST APIS
 
-hideuri: {
-url: "https://hideuri.com/api/v1/shorten",
-method: "post",
-body: (val: string) => {
-return { url: val };
-},
-},
+  hideuri: {
+    url: "https://hideuri.com/api/v1/shorten",
+    method: "post",
+    body: (val: string) => {
+      return { url: val };
+    },
+  },
 
-rbgy: {
-url: "https://free-url-shortener.rb.gy/shorten",
-method: "post",
-body: (val: string) => {
-return { destination: val, dryRun: true };
-},
-},
+  rbgy: {
+    url: "https://free-url-shortener.rb.gy/shorten",
+    method: "post",
+    body: (val: string) => {
+      return { destination: val, dryRun: true };
+    },
+  },
 };
 
 /**
@@ -149,11 +149,11 @@ return { destination: val, dryRun: true };
  * @return {IResponse}
  */
 const minify = async (
-longUrl: string,
-option: IOptions = { provider: "isgd", timeout: 2000 },
+  longUrl: string,
+  option: IOptions = { provider: "isgd", timeout: 2000 },
 ): Promise<IResponse> => {
-const response = await getAxios(ValidProviders[option.provider]!, longUrl, option);
-return responseMap(response, longUrl, option.provider);
+  const response = await getAxios(ValidProviders[option.provider]!, longUrl, option);
+  return responseMap(response, longUrl, option.provider);
 };
 
 export default minify;

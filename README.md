@@ -24,28 +24,24 @@ Currently 12 providers are supported
 For typescript
 
 ```ts
-import minify from 'url-minify';
+import minify from "url-minify";
 
 ~(async function () {
-	console.log(
-		await minify('https://rubiin.vercel.app', { provider: 'isgd' }),
-	);
+  console.log(await minify("https://rubiin.vercel.app", { provider: "isgd" }));
 
-	// ==> {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
+  // ==> {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
 })();
 ```
 
 For plain js
 
 ```js
-const minify = require('url-minify').default;
+const minify = require("url-minify").default;
 
 ~(async function () {
-	console.log(
-		await minify('https://rubiin.vercel.app', { provider: 'isgd' }),
-	);
+  console.log(await minify("https://rubiin.vercel.app", { provider: "isgd" }));
 
-	// ==> {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
+  // ==> {longUrl: 'https://rubiin.vercel.app',shortUrl: 'https://is.gd/PTkruq'}
 })();
 ```
 
@@ -76,16 +72,16 @@ Url shortner supports the following providers.
 
 | Provider    | Status |
 | ----------- | ------ |
-| is.gd       | ✔️      |
-| cdpt.in     | ✔️      |
-| v.gd	      | ✔️      |
-| rb.gy				| ✔️      |
-| 4h.net      | ✔️      |
-| vurl.com    | ✔️      |
-| pwn.se      | ✔️      |
-| haha.se     | ✔️      |
-| cya.se      | ✔️      |
-| hideuri.com | ✔️      |
+| is.gd       | ✔️     |
+| cdpt.in     | ✔️     |
+| v.gd        | ✔️     |
+| rb.gy       | ✔️     |
+| 4h.net      | ✔️     |
+| vurl.com    | ✔️     |
+| pwn.se      | ✔️     |
+| haha.se     | ✔️     |
+| cya.se      | ✔️     |
+| hideuri.com | ✔️     |
 
 ## Contributing
 
