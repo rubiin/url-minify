@@ -1,6 +1,6 @@
 {
   "name": "url-minify",
-  "version": "2.8.7",
+  "version": "2.8.8",
   "description": "Library to shorten url without any api keys",
   "keywords": [],
   "homepage": "https://github.com/rubiin/url-minify#readme",
