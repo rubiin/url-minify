@@ -41,7 +41,6 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "prepublishOnly": "npm run build",
-    "release": "bumpp && pnpm publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
@@ -51,7 +50,6 @@
   "devDependencies": {
     "@rubiin/tsconfig": "^2.2.0",
     "@types/node": "^24.12.4",
-    "bumpp": "^11.1.0",
     "oxfmt": "^0.52.0",
     "oxlint": "^1.67.0",
     "tsdown": "^0.22.1",
