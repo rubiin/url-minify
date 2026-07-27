@@ -50,9 +50,9 @@
   "devDependencies": {
     "@rubiin/tsconfig": "^2.2.0",
     "@types/node": "^24.13.3",
-    "oxfmt": "^0.59.0",
-    "oxlint": "^1.74.0",
-    "tsdown": "^0.22.12",
+    "oxfmt": "^0.60.0",
+    "oxlint": "^1.75.0",
+    "tsdown": "^0.22.14",
     "typescript": "^6.0.3",
     "vite": "^8.1.5",
     "vitest": "^4.1.10"
