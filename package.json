@@ -45,16 +45,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "axios": "^1.18.1"
+    "axios": "^1.19.0"
   },
   "devDependencies": {
     "@rubiin/tsconfig": "^2.2.0",
     "@types/node": "^24.13.3",
-    "oxfmt": "^0.60.0",
-    "oxlint": "^1.75.0",
+    "oxfmt": "^0.61.0",
+    "oxlint": "^1.76.0",
     "tsdown": "^0.22.14",
     "typescript": "^7.0.2",
-    "vite": "^8.1.5",
+    "vite": "^8.2.0",
     "vitest": "^4.1.10"
   }
 }
