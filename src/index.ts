@@ -2,7 +2,6 @@ import axios from "axios";
 
 type providers =
   | "isgd"
-  | "cdpt"
   | "vgd"
   | "4hnet"
   | "rbgy"
@@ -13,7 +12,12 @@ type providers =
   | "tinyurl"
   | "clck"
   | "dagd"
-  | "spoo";
+  | "spoo"
+  | "shrtr"
+  | "zip1"
+  | "urlvanish"
+  | "tinysrc"
+  | "a777";
 /**
  *
  *
@@ -62,6 +66,7 @@ function responseMap(response: Record<any, any>, longUrl: string, provider: prov
     else if (response.data?.shortenedUrl) return { longUrl, shortUrl: response.data.shortenedUrl };
     else if (response.data?.short) return { longUrl, shortUrl: response.data.short };
     else if (response.data?.short_url) return { longUrl, shortUrl: response.data.short_url };
+    else if (response.data?.shorturl) return { longUrl, shortUrl: response.data.shorturl };
     else if (response.data?.result_url) return { longUrl, shortUrl: response.data.result_url };
   }
 
@@ -91,10 +96,6 @@ const getAxios = (provider: IProviders, longUrl: string, option: IOptions) => {
 const ValidProviders: Record<string, IProviders> = {
   isgd: {
     url: "https://is.gd/create.php?format=simple&url=",
-    method: "get",
-  },
-  cdpt: {
-    url: "https://cdpt.in/shorten?url=",
     method: "get",
   },
   vgd: {
@@ -136,6 +137,10 @@ const ValidProviders: Record<string, IProviders> = {
     url: "https://da.gd/shorten?url=",
     method: "get",
   },
+  urlvanish: {
+    url: "https://urlvanish.com/api/shorten?url=",
+    method: "get",
+  },
   // POST APIS
 
   rbgy: {
@@ -150,6 +155,34 @@ const ValidProviders: Record<string, IProviders> = {
     method: "post",
     body: (val: string) => {
       return { long_url: val };
+    },
+  },
+  shrtr: {
+    url: "https://shrtr.top/api/v1/shorten",
+    method: "post",
+    body: (val: string) => {
+      return { url: val };
+    },
+  },
+  zip1: {
+    url: "https://zip1.io/api/create",
+    method: "post",
+    body: (val: string) => {
+      return { url: val };
+    },
+  },
+  tinysrc: {
+    url: "https://api.tinysrc.me/v1/create",
+    method: "post",
+    body: (val: string) => {
+      return { url: val };
+    },
+  },
+  a777: {
+    url: "https://a777.lt/api/shorten",
+    method: "post",
+    body: (val: string) => {
+      return { url: val };
     },
   },
 };

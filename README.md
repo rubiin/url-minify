@@ -19,7 +19,7 @@ yarn add url-minify
 
 # USAGE
 
-Currently 13 providers are supported
+Currently 17 providers are supported
 
 For typescript
 
@@ -58,7 +58,7 @@ Type: `object`
 Type: `string`
 
 Service to use for shortening links. Defaults to `isgd`
-Available providers: `'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya' | 'tinyurl' | 'clck' | 'dagd' | 'spoo'`
+Available providers: `'isgd' | 'vgd' | '4hnet' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya' | 'tinyurl' | 'clck' | 'dagd' | 'spoo' | 'shrtr' | 'zip1' | 'urlvanish' | 'tinysrc' | 'a777'`
 
 ##### timeout
 
@@ -70,21 +70,25 @@ Response timeout in milliseconds. Defaults to `2000`
 
 Url shortner supports the following providers.
 
-| Provider    | Status |
-| ----------- | ------ |
-| is.gd       | ✔️     |
-| cdpt.in     | ✔️     |
-| v.gd        | ✔️     |
-| rb.gy       | ✔️     |
-| 4h.net      | ✔️     |
-| vurl.com    | ✔️     |
-| pwm.se      | ✔️     |
-| haha.se     | ✔️     |
-| cya.se      | ✔️     |
-| tinyurl.com | ✔️     |
-| clck.ru     | ✔️     |
-| da.gd       | ✔️     |
-| spoo.me     | ✔️     |
+| Provider      | Status |
+| ------------- | ------ |
+| is.gd         | ✔️     |
+| v.gd          | ✔️     |
+| rb.gy         | ✔️     |
+| 4h.net        | ✔️     |
+| vurl.com      | ✔️     |
+| pwm.se        | ✔️     |
+| haha.se       | ✔️     |
+| cya.se        | ✔️     |
+| tinyurl.com   | ✔️     |
+| clck.ru       | ✔️     |
+| da.gd         | ✔️     |
+| spoo.me       | ✔️     |
+| shrtr.top     | ✔️     |
+| zip1.io       | ✔️     |
+| urlvanish.com | ✔️     |
+| tinysrc.me    | ✔️     |
+| a777.lt       | ✔️     |
 
 ## Contributing
 

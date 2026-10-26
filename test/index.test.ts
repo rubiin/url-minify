@@ -64,4 +64,29 @@ describe("should get a shortened url", () => {
     const response = await minify(url, { provider: "spoo" });
     expect(response.shortUrl).toMatch(/^https:\/\/spoo\.me\//);
   });
+
+  it("should get shortened url with shrtr.top", async () => {
+    const response = await minify(url, { provider: "shrtr" });
+    expect(response.shortUrl).toMatch(/^https:\/\/shrtr\.top\//);
+  });
+
+  it("should get shortened url with zip1.io", async () => {
+    const response = await minify(url, { provider: "zip1" });
+    expect(response.shortUrl).toMatch(/^https:\/\/zip1\.io\//);
+  });
+
+  it("should get shortened url with urlvanish.com", async () => {
+    const response = await minify(url, { provider: "urlvanish" });
+    expect(response.shortUrl).toMatch(/^https:\/\/urlvanish\.com\//);
+  });
+
+  it("should get shortened url with tinysrc.me", async () => {
+    const response = await minify(url, { provider: "tinysrc" });
+    expect(response.shortUrl).toMatch(/^https:\/\/tinysrc\.me\//);
+  });
+
+  it("should get shortened url with a777.lt", async () => {
+    const response = await minify(url, { provider: "a777" });
+    expect(response.shortUrl).toMatch(/^https:\/\/a777\.lt\//);
+  });
 });
