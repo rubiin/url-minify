@@ -9,7 +9,11 @@ type providers =
   | "vurl"
   | "haha"
   | "pwm"
-  | "cya";
+  | "cya"
+  | "tinyurl"
+  | "clck"
+  | "dagd"
+  | "spoo";
 /**
  *
  *
@@ -76,7 +80,7 @@ function responseMap(response: Record<any, any>, longUrl: string, provider: prov
  */
 const getAxios = (provider: IProviders, longUrl: string, option: IOptions) => {
   if (provider.method === "get") {
-    return axios.get(provider.url + longUrl, { timeout: option.timeout });
+    return axios.get(provider.url + encodeURIComponent(longUrl), { timeout: option.timeout });
   } else {
     return axios.post(provider.url, provider.body(longUrl), {
       timeout: option.timeout,
@@ -120,6 +124,18 @@ const ValidProviders: Record<string, IProviders> = {
     url: "https://vurl.com/api.php?url=",
     method: "get",
   },
+  tinyurl: {
+    url: "https://tinyurl.com/api-create.php?url=",
+    method: "get",
+  },
+  clck: {
+    url: "https://clck.ru/--?url=",
+    method: "get",
+  },
+  dagd: {
+    url: "https://da.gd/shorten?url=",
+    method: "get",
+  },
   // POST APIS
 
   rbgy: {
@@ -127,6 +143,13 @@ const ValidProviders: Record<string, IProviders> = {
     method: "post",
     body: (val: string) => {
       return { destination: val, dryRun: true };
+    },
+  },
+  spoo: {
+    url: "https://spoo.me/api/v1/shorten",
+    method: "post",
+    body: (val: string) => {
+      return { long_url: val };
     },
   },
 };

@@ -44,4 +44,24 @@ describe("should get a shortened url", () => {
     const response = await minify(url, { provider: "cya" });
     expect(response.shortUrl).toMatch(/^https:\/\/cya.se\//);
   });
+
+  it("should get shortened url with tinyurl.com", async () => {
+    const response = await minify(url, { provider: "tinyurl" });
+    expect(response.shortUrl).toMatch(/^https:\/\/tinyurl\.com\//);
+  });
+
+  it("should get shortened url with clck.ru", async () => {
+    const response = await minify(url, { provider: "clck" });
+    expect(response.shortUrl).toMatch(/^https:\/\/clck\.ru\//);
+  });
+
+  it("should get shortened url with da.gd", async () => {
+    const response = await minify(url, { provider: "dagd" });
+    expect(response.shortUrl).toMatch(/^https:\/\/da\.gd\//);
+  });
+
+  it("should get shortened url with spoo.me", async () => {
+    const response = await minify(url, { provider: "spoo" });
+    expect(response.shortUrl).toMatch(/^https:\/\/spoo\.me\//);
+  });
 });

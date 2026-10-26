@@ -19,7 +19,7 @@ yarn add url-minify
 
 # USAGE
 
-Currently 9 providers are supported
+Currently 13 providers are supported
 
 For typescript
 
@@ -58,7 +58,7 @@ Type: `object`
 Type: `string`
 
 Service to use for shortening links. Defaults to `isgd`
-Available providers: `''isgd' | 'cdpt' | 'vgd' | '4hnet' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya`
+Available providers: `'isgd' | 'cdpt' | 'vgd' | '4hnet' | 'rbgy' | 'vurl' | 'haha' | 'pwm' | 'cya' | 'tinyurl' | 'clck' | 'dagd' | 'spoo'`
 
 ##### timeout
 
@@ -78,9 +78,13 @@ Url shortner supports the following providers.
 | rb.gy       | ✔️     |
 | 4h.net      | ✔️     |
 | vurl.com    | ✔️     |
-| pwn.se      | ✔️     |
+| pwm.se      | ✔️     |
 | haha.se     | ✔️     |
 | cya.se      | ✔️     |
+| tinyurl.com | ✔️     |
+| clck.ru     | ✔️     |
+| da.gd       | ✔️     |
+| spoo.me     | ✔️     |
 
 ## Contributing
 
