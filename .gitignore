@@ -3,6 +3,7 @@
 .idea
 *.log
 *.tgz
+*.tsbuildinfo
 coverage
 dist
 lib-cov
