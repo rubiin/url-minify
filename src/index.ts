@@ -9,8 +9,7 @@ type providers =
   | "vurl"
   | "haha"
   | "pwm"
-  | "cya"
-  | "hideuri";
+  | "cya";
 /**
  *
  *
@@ -122,14 +121,6 @@ const ValidProviders: Record<string, IProviders> = {
     method: "get",
   },
   // POST APIS
-
-  hideuri: {
-    url: "https://hideuri.com/api/v1/shorten",
-    method: "post",
-    body: (val: string) => {
-      return { url: val };
-    },
-  },
 
   rbgy: {
     url: "https://free-url-shortener.rb.gy/shorten",

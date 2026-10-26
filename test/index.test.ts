@@ -20,11 +20,6 @@ describe("should get a shortened url", () => {
     expect(response.shortUrl).toMatch(/^https:\/\/4h.net\//);
   });
 
-  it("should get shortened url with hideuri.com", async () => {
-    const response = await minify(url, { provider: "hideuri" });
-    expect(response.shortUrl).toMatch(/^https:\/\/hideuri.com\//);
-  });
-
   it("should get shortened url with rb.gy", async () => {
     const response = await minify(url, { provider: "rbgy" });
     expect(response.shortUrl).toMatch(/^https:\/\/rb.gy\//);
